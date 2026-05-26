@@ -1,0 +1,455 @@
+/* Цветовая палитра на основе логотипа MedWay */
+:root {
+    --mw-blue: #1C6EA4; /* Глубокий синий */
+    --mw-green: #54A846; /* Травяной зеленый */
+    --mw-blue-hover: #145077;
+    --mw-green-hover: #428736;
+    
+    --text-dark: #2D3748;
+    --text-muted: #718096;
+    --bg-light: #F7FAFC;
+    --white: #FFFFFF;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+}
+
+body {
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Типографика логотипа */
+.logo {
+    display: flex;
+    text-decoration: none;
+}
+.logo-blue { color: var(--mw-blue); font-weight: 700; font-size: 32px; letter-spacing: -0.5px;}
+.logo-green { color: var(--mw-green); font-weight: 700; font-size: 32px; letter-spacing: -0.5px;}
+.logo-slogan {
+    font-size: 13px;
+    font-style: italic;
+    color: var(--text-muted);
+    margin-top: -5px;
+}
+
+/* Кнопки */
+.btn {
+    padding: 14px 28px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 15px;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.btn-primary {
+    background-color: var(--mw-green);
+    color: var(--white);
+    width: 100%;
+}
+.btn-primary:hover { background-color: var(--mw-green-hover); }
+
+.btn-secondary {
+    background-color: var(--mw-blue);
+    color: var(--white);
+    width: 100%;
+}
+.btn-secondary:hover { background-color: var(--mw-blue-hover); }
+
+.btn-outline {
+    background-color: transparent;
+    border: 2px solid var(--mw-blue);
+    color: var(--mw-blue);
+    padding: 10px 20px;
+}
+.btn-outline:hover {
+    background-color: var(--mw-blue);
+    color: var(--white);
+}
+
+/* Шапка */
+.header {
+    background-color: var(--white);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.header-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 90px;
+}
+
+.nav a {
+    text-decoration: none;
+    color: var(--text-dark);
+    margin: 0 18px;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+.nav a:hover { color: var(--mw-green); }
+
+.header-contacts {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.phone {
+    font-size: 18px;
+    font-weight: 700;
+    text-decoration: none;
+    color: var(--text-dark);
+}
+
+/* Главный экран */
+.hero {
+    /* Легкий градиент, объединяющий цвета логотипа в очень светлых тонах */
+    background: linear-gradient(135deg, rgba(28,110,164,0.05) 0%, rgba(84,168,70,0.05) 100%);
+    padding: 80px 0;
+}
+
+.hero-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+}
+
+.hero-content h1 {
+    font-size: 44px;
+    color: var(--mw-blue);
+    margin-bottom: 25px;
+    line-height: 1.2;
+}
+
+.hero-content p {
+    font-size: 18px;
+    color: var(--text-muted);
+    margin-bottom: 35px;
+    max-width: 550px;
+}
+
+.hero-features {
+    list-style: none;
+}
+.hero-features li {
+    font-size: 18px;
+    margin-bottom: 12px;
+    font-weight: 500;
+}
+.check {
+    color: var(--mw-green);
+    font-weight: bold;
+    margin-right: 8px;
+}
+
+/* Форма заявки */
+.hero-form-card {
+    background: var(--white);
+    padding: 40px 30px;
+    border-radius: 12px;
+    box-shadow: 0 20px 40px rgba(28,110,164,0.08);
+    width: 100%;
+    max-width: 420px;
+    border-top: 5px solid var(--mw-green);
+}
+
+.hero-form-card h3 {
+    text-align: center;
+    font-size: 24px;
+    color: var(--mw-blue);
+    margin-bottom: 10px;
+}
+
+.hero-form-card p {
+    text-align: center;
+    font-size: 14px;
+    color: var(--text-muted);
+    margin-bottom: 25px;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.form input {
+    padding: 16px;
+    border: 1px solid #E2E8F0;
+    border-radius: 6px;
+    font-size: 16px;
+    background-color: #F8FAFC;
+    transition: border 0.3s;
+}
+.form input:focus {
+    outline: none;
+    border-color: var(--mw-blue);
+    background-color: var(--white);
+}
+
+.form small {
+    font-size: 11px;
+    color: #A0AEC0;
+    text-align: center;
+    margin-top: 8px;
+}
+
+/* Блок услуг */
+.services {
+    padding: 90px 0;
+    background-color: var(--white);
+}
+
+.section-title {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 50px;
+    color: var(--mw-blue);
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 30px;
+}
+
+.service-card {
+    background: var(--bg-light);
+    padding: 35px 25px;
+    border-radius: 10px;
+    border: 1px solid #E2E8F0;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.05);
+    border-color: var(--mw-green);
+}
+
+.service-card h4 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: var(--text-dark);
+}
+
+.service-card p {
+    font-size: 15px;
+    color: var(--text-muted);
+    margin-bottom: 25px;
+    min-height: 60px;
+}
+
+.price {
+    font-size: 26px;
+    font-weight: 700;
+    color: var(--mw-green);
+    margin-bottom: 25px;
+}
+
+/* Преимущества */
+.advantages {
+    padding: 90px 0;
+    background-color: var(--bg-light);
+}
+
+.adv-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 40px;
+}
+
+.adv-item {
+    background: var(--white);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+    border-left: 4px solid var(--mw-blue);
+}
+
+.adv-icon {
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+.adv-item h4 {
+    font-size: 20px;
+    margin-bottom: 12px;
+    color: var(--mw-blue);
+}
+.adv-item p {
+    color: var(--text-muted);
+}
+
+/* Подвал */
+.footer {
+    background-color: #1A202C;
+    color: var(--white);
+    padding: 60px 0 20px;
+}
+
+.footer-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #2D3748;
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+}
+
+.footer-info p {
+    color: #A0AEC0;
+    margin-top: 10px;
+}
+
+.footer-contacts p {
+    color: #A0AEC0;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.phone-footer {
+    color: var(--mw-green);
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.footer-bottom {
+    text-align: center;
+    color: #718096;
+    font-size: 14px;
+}
+
+/* Адаптивность для мобильных устройств */
+@media (max-width: 992px) {
+    .hero-inner {
+        flex-direction: column;
+        text-align: center;
+    }
+    .hero-content p {
+        margin: 0 auto 30px;
+    }
+    .hero-features li {
+        display: inline-block;
+        margin: 0 10px 15px;
+    }
+    .hero-form-card {
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .header-inner {
+        flex-direction: column;
+        height: auto;
+        padding: 15px 0;
+        gap: 15px;
+    }
+    .nav {
+        display: none; 
+    }
+    .hero-content h1 {
+        font-size: 32px;
+    }
+    .footer-inner {
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
+    }
+}
+
+/* ========================================= */
+/* СТИЛИ ДЛЯ БЛОКА ГАЛЕРЕИ                  */
+/* ========================================= */
+
+.gallery {
+    padding: 90px 0;
+    background-color: var(--white); /* Белый фон для контраста с соседними блоками */
+}
+
+/* Подзаголовок для секции */
+.section-subtitle {
+    text-align: center;
+    color: var(--text-muted);
+    margin-top: -40px; /* Поднимаем ближе к заголовку */
+    margin-bottom: 50px;
+    font-size: 16px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Сетка галереи */
+.gallery-grid {
+    display: grid;
+    /* Автоматические колонки: минимум 300px, заполняют все пространство */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px; /* Отступы между фото */
+}
+
+/* Элемент галереи (обертка для фото) */
+.gallery-item {
+    position: relative;
+    overflow: hidden; /* Чтобы фото не вылезало при увеличении */
+    border-radius: 10px; /* Скругляем углы */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05); /* Легкая тень */
+    /* Фиксированное соотношение сторон 3:2, чтобы все фото были одинаковой высоты */
+    aspect-ratio: 3 / 2; 
+    cursor: pointer;
+    transition: box-shadow 0.3s ease;
+}
+
+/* Само изображение в галерее */
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Фото заполняет блок, обрезаясь при необходимости */
+    display: block;
+    transition: transform 0.4s ease; /* Анимация увеличения */
+}
+
+/* Эффекты при наведении на фото */
+.gallery-item:hover {
+    /* Тень становится более выраженной и принимает фирменный синий оттенок */
+    box-shadow: 0 10px 25px rgba(28, 110, 164, 0.2); 
+}
+
+.gallery-item:hover img {
+    transform: scale(1.08); /* Легкое увеличение изображения внутри блока */
+}
+
+/* Адаптация для мобильных устройств */
+@media (max-width: 768px) {
+    .gallery {
+        padding: 60px 0;
+    }
+    .section-subtitle {
+        margin-bottom: 30px;
+        font-size: 14px;
+        padding: 0 10px;
+    }
+    .gallery-grid {
+        /* На совсем маленьких экранах делаем колонки чуть уже, чтобы помещались */
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 15px;
+    }
+}
