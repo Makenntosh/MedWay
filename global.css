@@ -11,6 +11,10 @@
     --white: #FFFFFF;
 }
 
+html {
+    scroll-behavior: smooth; 
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -121,7 +125,7 @@ body {
 /* Главный экран */
 .hero {
     /* Легкий градиент, объединяющий цвета логотипа в очень светлых тонах */
-    background: linear-gradient(135deg, rgba(28,110,164,0.05) 0%, rgba(84,168,70,0.05) 100%);
+    background: var(--bg-light);
     padding: 80px 0;
 }
 
@@ -160,109 +164,244 @@ body {
     margin-right: 8px;
 }
 
-/* Форма заявки */
-.hero-form-card {
-    background: var(--white);
-    padding: 40px 30px;
-    border-radius: 12px;
-    box-shadow: 0 20px 40px rgba(28,110,164,0.08);
-    width: 100%;
-    max-width: 420px;
-    border-top: 5px solid var(--mw-green);
-}
-
-.hero-form-card h3 {
-    text-align: center;
-    font-size: 24px;
-    color: var(--mw-blue);
-    margin-bottom: 10px;
-}
-
-.hero-form-card p {
-    text-align: center;
-    font-size: 14px;
-    color: var(--text-muted);
-    margin-bottom: 25px;
-}
-
-.form {
+.hero-image-wrapper {
+    flex: 1;
     display: flex;
-    flex-direction: column;
-    gap: 16px;
+    justify-content: center; /* Центрируем фото в блоке */
+    max-width: 500px; /* Максимальная ширина картинки */
+    position: relative;
 }
 
-.form input {
-    padding: 16px;
-    border: 1px solid #E2E8F0;
-    border-radius: 6px;
-    font-size: 16px;
-    background-color: #F8FAFC;
-    transition: border 0.3s;
-}
-.form input:focus {
-    outline: none;
-    border-color: var(--mw-blue);
-    background-color: var(--white);
+/* Стили самой картинки */
+.hero-image {
+    width: 100%; max-width: 450px; border-radius: 20px; object-fit: cover; box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
 }
 
-.form small {
-    font-size: 11px;
-    color: #A0AEC0;
-    text-align: center;
-    margin-top: 8px;
-}
+/* ========================================= */
+/* МИНИМАЛИСТИЧНЫЕ КАРТОЧКИ УСЛУГ            */
+/* ========================================= */
 
-/* Блок услуг */
 .services {
-    padding: 90px 0;
-    background-color: var(--white);
+    padding: 80px 0;
+    background-color: white;
 }
 
 .section-title {
-    text-align: center;
-    font-size: 36px;
-    margin-bottom: 50px;
+    font-size: 32px;
     color: var(--mw-blue);
-}
-
-.services-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 30px;
-}
-
-.service-card {
-    background: var(--bg-light);
-    padding: 35px 25px;
-    border-radius: 10px;
-    border: 1px solid #E2E8F0;
-    text-align: center;
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-.service-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 15px 30px rgba(0,0,0,0.05);
-    border-color: var(--mw-green);
-}
-
-.service-card h4 {
-    font-size: 20px;
     margin-bottom: 15px;
-    color: var(--text-dark);
+    font-weight: 500;
 }
 
-.service-card p {
+/* Сетка карточек */
+.services-grid-minimal {
+    display: grid;
+    /* На больших экранах 4 колонки, адаптируется автоматически */
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 20px;
+}
+
+/* Сама карточка */
+.minimal-card {
+    background-color: #ffffff;
+    border: 1px solid #E5E7EB; /* Тонкая, едва заметная рамка */
+    border-radius: 20px;
+    padding: 30px 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Прижимает цену к низу */
+    transition: all 0.3s ease;
+    min-height: 190px; /* Одинаковая высота для всех карточек */
+}
+
+/* Эффект при наведении курсора */
+.minimal-card:hover {
+    border-color: #789BFE; /* Синий цвет из вашего дизайна */
+    box-shadow: 0 12px 30px rgba(120, 155, 254, 0.1);
+    transform: translateY(-4px); /* Легкое поднятие карточки */
+}
+
+/* Заголовок карточки */
+.minimal-card-header h4 {
+    font-size: 20px;
+    font-weight: 600;
+    color: #1F2937;
+    margin: 0 0 10px 0;
+}
+
+/* Описание */
+.minimal-card-header p {
+    font-size: 14px;
+    color: #6B7280;
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* Блок с ценой */
+.minimal-card-price {
+    margin-top: 25px;
+}
+
+/* Цена оформлена как стильная плашка */
+.minimal-card-price span {
+    display: inline-block;
+    background-color: #F3F6FF; /* Очень светло-синий фон */
+    color: #789BFE;            /* Синий текст */
+    padding: 8px 16px;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 16px;
+    letter-spacing: 0.5px;
+}
+
+/* Адаптивность для телефонов */
+@media (max-width: 600px) {
+    .services-grid-minimal {
+        grid-template-columns: 1fr; /* 1 колонка на мобильных */
+    }
+    
+    .minimal-card {
+        min-height: auto;
+    }
+}
+
+/* ========================================= */
+/* БЛОК: ПОЛИТИКА (ПРЕПАРАТЫ ПАЦИЕНТА)       */
+/* ========================================= */
+
+.policy-section {
+    padding: 80px 0;
+    background-color: var(--white);
+}
+
+/* Верхняя часть с текстом и картинкой */
+.policy-top {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    margin-bottom: 60px;
+}
+
+.policy-info {
+    flex: 1;
+    max-width: 650px;
+}
+
+.policy-title {
+    font-size: 38px;
+    color: var(--mw-blue);
+    line-height: 1.2;
+    margin-bottom: 30px;
+    font-weight: 500;
+}
+
+.highlight-red {
+    color: var(--mw-green); /* Мягкий красный цвет как на скриншоте */
+}
+
+.policy-info p {
+    font-size: 16px;
+    color: var(--text-dark);
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.policy-info .policy-important {
+    font-size: 17px;
+}
+
+.policy-info strong {
+    font-weight: 700;
+    color: #000;
+}
+
+/* Иллюстрация */
+.policy-image-wrapper {
+    flex: 0 0 45%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.policy-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 24px; /* Закругленные углы как на макете */
+    object-fit: cover;
+}
+
+/* Карточки причин */
+.policy-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 24px;
+}
+
+.policy-card {
+    background-color: #FCFDFD; /* Очень легкий фон */
+    border: 1px solid #F0F4F8;
+    border-radius: 20px;
+    padding: 35px 30px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.02);
+}
+
+.policy-card-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    margin-bottom: 15px;
+}
+
+.policy-card-header h4 {
+    font-size: 18px;
+    color: var(--text-dark);
+    line-height: 1.3;
+    font-weight: 600;
+    margin-top: -2px; /* Выравнивание текста по уровню иконки */
+}
+
+.policy-card p {
     font-size: 15px;
     color: var(--text-muted);
-    margin-bottom: 25px;
-    min-height: 60px;
+    line-height: 1.5;
+    margin-left: 36px; /* Отступ текста под заголовок (ширина иконки + gap) */
 }
 
-.price {
-    font-size: 26px;
-    font-weight: 700;
-    color: var(--mw-green);
-    margin-bottom: 25px;
+/* Иконки крестика и галочки */
+.icon-red {
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+    color: #E05252; /* Ярко-красный для крестика */
+}
+
+.icon-green {
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+    color: var(--mw-green); /* Фирменный зеленый для галочки */
+}
+
+/* Адаптивность для мобильных */
+@media (max-width: 992px) {
+    .policy-top {
+        flex-direction: column;
+        text-align: left;
+    }
+    .policy-image-wrapper {
+        width: 100%;
+        justify-content: center;
+        margin-top: 20px;
+    }
+    .policy-title {
+        font-size: 32px;
+    }
+}
+
+@media (max-width: 768px) {
+    .policy-card p {
+        margin-left: 0;
+    }
 }
 
 /* Преимущества */
@@ -297,6 +436,536 @@ body {
 }
 .adv-item p {
     color: var(--text-muted);
+}
+
+/* ========================================= */
+/* СЛАЙДЕР С ЖЕСТКОЙ СЕТКОЙ НА 3 КАРТОЧКИ     */
+/* ========================================= */
+
+.services-slider-section {
+    padding: 80px 0;
+}
+
+.slider-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.slider-title-wrapper h2 {
+    font-size: 32px;
+    color: var(--mw-blue);
+    margin-bottom: 15px;
+    font-weight: 500;
+}
+
+.slider-title-wrapper p {
+    font-size: 16px;
+    color: var(--text-dark);
+    max-width: 800px;
+    line-height: 1.5;
+}
+
+.slider-arrows {
+    display: flex;
+    gap: 15px;
+    flex-shrink: 0;
+}
+
+.arrow-btn {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background-color: var(--mw-blue);
+    color: white;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.arrow-btn:hover {
+    background-color: var(--mw-blue);
+}
+
+/* Главный контейнер, который режет всё лишнее */
+.slider-container {
+    width: 100%;
+    overflow: hidden;
+}
+
+/* Лента слайдера */
+.slider-track {
+    display: flex;
+    gap: 24px; /* Фиксированный зазор между карточками */
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding-bottom: 20px; /* Запас под тени */
+    cursor: grab;
+    user-select: none;
+    -webkit-overflow-scrolling: touch;
+    
+    /* Включаем жесткое примагничивание элементов */
+    scroll-snap-type: x mandatory; 
+}
+
+.slider-track:active {
+    cursor: grabbing;
+}
+
+/* Скрываем полосу прокрутки */
+.slider-track::-webkit-scrollbar {
+    display: none;
+}
+.slider-track {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+/* Сама карточка */
+.pricing-card {
+    /* Рассчитываем ширину: (100% ширины контейнера - 2 отступа по 24px) делим на 3 */
+    flex: 0 0 calc((100% - (2 * 24px)) / 3); 
+    box-sizing: border-box;
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 35px 30px;
+    border: 1px solid #edf2f7;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+    display: flex;
+    flex-direction: column;
+    
+    /* Точка привязки для автодокрутки */
+    scroll-snap-align: start; 
+}
+
+.card-price {
+    font-size: 22px;
+    font-weight: 500;
+    color: var(--mw-green);
+    margin-bottom: 20px;
+}
+
+.card-title {
+    font-size: 24px;
+    font-weight: 500;
+    color: var(--mw-blue);
+    margin-bottom: 25px;
+    line-height: 1.3;
+}
+
+.card-features {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.card-features li {
+    font-size: 15px;
+    color: var(--text-dark);
+    margin-bottom: 12px;
+    padding-left: 20px;
+    position: relative;
+    line-height: 1.4;
+}
+
+.card-features li::before {
+    content: '✔';
+    position: absolute;
+    left: 0;
+    top: 1px;
+    font-size: 12px;
+    color: #111;
+}
+
+/* Адаптивность под планшеты (показываем 2 карточки) */
+@media (max-width: 992px) {
+    .slider-header {
+        flex-direction: column;
+    }
+    .pricing-card {
+        flex: 0 0 calc((100% - (1 * 24px)) / 2); /* Ровно 2 карточки */
+        padding: 30px 25px;
+    }
+}
+
+/* Адаптивность под телефоны (показываем 1 карточку на весь экран) */
+@media (max-width: 600px) {
+    .pricing-card {
+        flex: 0 0 100%; /* Ровно 1 карточка */
+    }
+}
+
+/* ========================================= */
+/* БЛОК "О КЛИНИКЕ" И СТАТИСТИКА             */
+/* ========================================= */
+
+.about-clinic {
+    padding: 80px 0;
+    background-color: var(--white);
+}
+
+/* Верхняя часть с текстом и картинкой */
+.about-content {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    margin-bottom: 60px;
+}
+
+.about-text {
+    flex: 1;
+}
+
+.about-text .subtitle {
+    font-size: 14px;
+    color: var(--text-muted);
+    margin-bottom: 12px;
+}
+
+.about-text .main-heading {
+    font-size: 26px;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 20px;
+    line-height: 1.3;
+}
+
+.about-text .description {
+    font-size: 16px;
+    color: var(--text-muted);
+    line-height: 1.6;
+}
+
+/* Картинка */
+.about-image {
+    flex: 1;
+}
+
+.about-image img {
+    width: 100%;
+    max-height: 350px;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+/* Нижняя плашка со статистикой */
+.about-stats {
+    background-color: #FAFAFD; /* Очень светлый серо-синий фон */
+    border-radius: 24px;
+    padding: 50px 30px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.stat-item {
+    flex: 1;
+    padding: 0 30px;
+    /* Синяя вертикальная линия слева от каждого пункта */
+    border-left: 2px solid #789BFE; 
+}
+
+.stat-icon {
+    margin-bottom: 25px;
+    display: flex;
+    align-items: center;
+}
+
+/* Цвет чисел, как на вашем макете (мягкий синий) */
+.stat-value {
+    font-size: 24px;
+    font-weight: 500;
+    color: #789BFE; 
+    margin-bottom: 10px;
+}
+
+.stat-label {
+    font-size: 14px;
+    color: var(--text-muted);
+}
+
+/* Адаптивность для планшетов и телефонов */
+@media (max-width: 992px) {
+    .about-content {
+        flex-direction: column;
+        gap: 30px;
+    }
+    
+    .about-image img {
+        max-height: 300px;
+    }
+
+    .about-stats {
+        flex-direction: column;
+        gap: 40px;
+        padding: 40px 20px;
+    }
+
+    /* На мобильных меняем вертикальную линию на горизонтальную */
+    .stat-item {
+        border-left: none;
+        border-top: 2px solid #789BFE;
+        padding: 20px 0 0 0;
+    }
+}
+
+/* ========================================= */
+/* БЛОК КОНТАКТОВ                            */
+/* ========================================= */
+
+.contacts {
+    padding: 80px 0;
+    background-color: #FAFAFD; /* Мягкий фон для отделения от других блоков */
+}
+
+.contacts-wrapper {
+    display: flex;
+    gap: 50px;
+    align-items: stretch; /* Растягивает карту и текст по одной высоте */
+}
+
+.contacts-info {
+    flex: 1;
+    max-width: 500px;
+}
+
+.contacts-desc {
+    font-size: 16px;
+    color: var(--text-muted);
+    line-height: 1.6;
+    margin-bottom: 35px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.contact-item:last-child {
+    margin-bottom: 0;
+}
+
+/* Иконки в стиле ваших сервисных карточек */
+.contact-item .contact-icon {
+    width: 44px;
+    height: 44px;
+    background: linear-gradient(135deg, rgba(28, 110, 164, 0.06) 0%, rgba(84, 168, 70, 0.06) 100%);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--mw-blue);
+    flex-shrink: 0;
+}
+
+.contact-text {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.contact-text span {
+    font-size: 12px;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.contact-text strong {
+    font-size: 16px;
+    color: var(--text-dark);
+    font-weight: 600;
+    line-height: 1.4;
+}
+
+/* Крупный кликабельный телефон */
+.contact-link {
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--mw-blue);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.contact-link:hover {
+    color: var(--mw-green);
+}
+
+/* Контейнер для карты */
+.contacts-map {
+    flex: 1;
+    min-height: 500px;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+    background-color: #e5e3df; /* Временный фон до загрузки карты */
+}
+
+/* Адаптивность для планшетов и мобильных */
+@media (max-width: 992px) {
+    .contacts-wrapper {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .contacts-info {
+        max-width: 100%;
+    }
+
+    .contacts-map {
+        width: 100%;
+        height: 350px; /* Фиксированная высота карты на телефонах */
+    }
+}
+
+/* ========================================= */
+/* БЛОК С СЕРТИФИКАТАМИ                      */
+/* ========================================= */
+
+.certificates-section {
+    padding: 80px 0;
+    background-color: white; /* Светлый фон для визуального разделения секций */
+    text-align: center;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.certificates-section .section-title {
+    margin-bottom: 15px;
+    color: var(--text-dark);
+}
+
+/* Подзаголовок для описания */
+.section-subtitle {
+    font-size: 16px;
+    color: #6B7280;
+    max-width: 600px;
+    margin: 0 auto 50px auto;
+    line-height: 1.5;
+}
+
+/* Контейнер для картинок */
+.certificates-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 40px; /* Расстояние между документами */
+}
+
+/* Карточка сертификата (рамка) */
+.certificate-item {
+    max-width: 380px; /* Максимальная ширина документа */
+    width: 100%;
+    background-color: #ffffff;
+    padding: 12px; /* Белая рамка вокруг картинки (эффект паспарту) */
+    border-radius: 12px;
+    border: 1px solid #E5E7EB;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.06);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.certificate-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+/* Сама картинка */
+.cert-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 6px; /* Внутреннее скругление */
+    object-fit: cover;
+}
+
+/* Адаптивность для мобильных телефонов и планшетов */
+@media (max-width: 768px) {
+    .certificates-section {
+        padding: 60px 0;
+    }
+
+    .certificates-wrapper {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+    
+    .certificate-item {
+        max-width: 100%; /* Картинка растянется по ширине экрана с учетом отступов контейнера */
+    }
+}
+
+/* ========================================= */
+/* МОДАЛЬНОЕ ОКНО ДЛЯ КАРТИНОК               */
+/* ========================================= */
+
+.image-modal {
+    display: none; /* Скрыто по умолчанию */
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.85); /* Темный полупрозрачный фон */
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Класс для плавного показа */
+.image-modal.show {
+    opacity: 1;
+}
+
+/* Увеличенная картинка */
+.modal-content {
+    max-width: 90%;
+    max-height: 90vh; /* Занимает максимум 90% высоты экрана */
+    border-radius: 8px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+    transform: scale(0.8);
+    transition: transform 0.3s ease;
+}
+
+.image-modal.show .modal-content {
+    transform: scale(1); /* Плавное увеличение при открытии */
+}
+
+/* Кнопка закрытия (крестик) */
+.modal-close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: #ffffff;
+    font-size: 50px;
+    font-weight: 300;
+    cursor: pointer;
+    transition: color 0.2s ease;
+    line-height: 1;
+}
+
+.modal-close:hover {
+    color: #48C0B5; /* Ваш бирюзовый цвет при наведении */
+}
+
+/* Адаптивность для телефонов */
+@media (max-width: 768px) {
+    .modal-close {
+        top: 10px;
+        right: 15px;
+        font-size: 40px;
+    }
 }
 
 /* Подвал */
@@ -359,9 +1028,8 @@ body {
 
 @media (max-width: 768px) {
     .header-inner {
-        flex-direction: column;
         height: auto;
-        padding: 15px 0;
+        padding: 15px 15px;
         gap: 15px;
     }
     .nav {
@@ -387,16 +1055,7 @@ body {
 }
 
 /* Подзаголовок для секции */
-.section-subtitle {
-    text-align: center;
-    color: var(--text-muted);
-    margin-top: -40px; /* Поднимаем ближе к заголовку */
-    margin-bottom: 50px;
-    font-size: 16px;
-    max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
-}
+
 
 /* Сетка галереи */
 .gallery-grid {

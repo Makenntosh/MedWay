@@ -14,14 +14,13 @@
                 <span class="logo-blue">Med</span><span class="logo-green">Way</span>
             </div>
             <nav class="nav">
-                <a href="#about">О клинике</a>
+                <a href="#gallery">Галерея</a> 
+                <a href="#advantages">Преимущества</a>
                 <a href="#services">Услуги</a>
-                <a href="#gallery">Галерея</a> <a href="#advantages">Преимущества</a>
                 <a href="#contacts">Контакты</a>
             </nav>
             <div class="header-contacts">
                 <a href="tel:+70000000000" class="phone">+7 (000) 000-00-00</a>
-                <button class="btn btn-outline">Заказать звонок</button>
             </div>
         </div>
     </header>
@@ -38,47 +37,160 @@
                 </ul>
             </div>
             
-            <div class="hero-form-card">
-                <h3>Вызвать врача</h3>
-                <p>Оставьте номер, и наш дежурный специалист перезвонит вам через 5 минут</p>
-                <form action="#" method="POST" class="form">
-                    <input type="text" placeholder="Как к вам обращаться?" required>
-                    <input type="tel" placeholder="Ваш телефон*" required>
-                    <button type="submit" class="btn btn-primary">Оставить заявку</button>
-                    <small>Нажимая кнопку, вы соглашаетесь с обработкой персональных данных</small>
-                </form>
+            <img 
+                src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?q=80&w=800&auto=format&fit=crop" 
+                alt="Клиника MedWay" 
+                class="hero-image"
+            >
+        </div>
+    </section>
+
+    <!-- Блок услуг (Компактный дизайн без кнопок) -->
+    <section class="services">
+        <div class="container">
+            <h2 class="section-title">Наши услуги</h2>
+            
+            <div class="services-grid-minimal">
+                
+                <div class="minimal-card">
+                    <div class="minimal-card-header">
+                        <h4>Выезд врача</h4>
+                        <p>Будем у вас через 30 минут</p>
+                    </div>
+                    <div class="minimal-card-price">
+                        <span>4 900 ₽</span>
+                    </div>
+                </div>
+
+                <div class="minimal-card">
+                    <div class="minimal-card-header">
+                        <h4>От запоя</h4>
+                        <p>Быстро выводит токсины, нормализует силы и сон</p>
+                    </div>
+                    <div class="minimal-card-price">
+                        <span>от 4 900 ₽</span>
+                    </div>
+                </div>
+
+                <div class="minimal-card">
+                    <div class="minimal-card-header">
+                        <h4>От похмелья</h4>
+                        <p>Снимает головную боль, тошноту и дрожь</p>
+                    </div>
+                    <div class="minimal-card-price">
+                        <span>от 4 900 ₽</span>
+                    </div>
+                </div>
+
+                <div class="minimal-card">
+                    <div class="minimal-card-header">
+                        <h4>При ломке</h4>
+                        <p>Облегчает абстиненцию, возвращает спокойствие</p>
+                    </div>
+                    <div class="minimal-card-price">
+                        <span>от 4 900 ₽</span>
+                    </div>
+                </div>
+
+                <div class="minimal-card">
+                    <div class="minimal-card-header">
+                        <h4>От алкоголя</h4>
+                        <p>Выводит алкоголь и снимает интоксикацию</p>
+                    </div>
+                    <div class="minimal-card-price">
+                        <span>от 4 900 ₽</span>
+                    </div>
+                </div>
+
+                <div class="minimal-card">
+                    <div class="minimal-card-header">
+                        <h4>От наркотиков</h4>
+                        <p>Снижает тягу и облегчает ломку</p>
+                    </div>
+                    <div class="minimal-card-price">
+                        <span>от 4 900 ₽</span>
+                    </div>
+                </div>
+
+                <div class="minimal-card">
+                    <div class="minimal-card-header">
+                        <h4>Детокс</h4>
+                        <p>Очищает организм и запускает восстановление</p>
+                    </div>
+                    <div class="minimal-card-price">
+                        <span>от 4 900 ₽</span>
+                    </div>
+                </div>
+
+                <div class="minimal-card">
+                    <div class="minimal-card-header">
+                        <h4>Седативная</h4>
+                        <p>Убирает тревожность и нормализует сон</p>
+                    </div>
+                    <div class="minimal-card-price">
+                        <span>от 3 500 ₽</span>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
 
-    <section id="services" class="services">
+    <!-- Блок: Почему не используем препараты пациента -->
+    <section class="policy-section">
         <div class="container">
-            <h2 class="section-title">Основные медицинские программы</h2>
-            <div class="services-grid">
-                <div class="service-card">
-                    <h4>Комплексное обследование</h4>
-                    <p>Сбор анализов, ЭКГ и осмотр терапевта на дому для точной постановки диагноза.</p>
-                    <div class="price">от 5 000 ₽</div>
-                    <button class="btn btn-secondary">Подробнее</button>
+            
+            <!-- Верхняя часть: текст и иллюстрация -->
+            <div class="policy-top">
+                <div class="policy-info">
+                    <h2 class="policy-title">Почему мы <span class="highlight-red">не используем</span><br> препараты пациента</h2>
+                    
+                    <p>Иногда пациенты или их родственники хотят использовать «свои препараты» для капельницы — например, купленные заранее или оставшиеся после предыдущего лечения.</p>
+                    
+                    <p class="policy-important">Важно понимать: <strong>врач не имеет права использовать препараты, которые принесены пациентом</strong>, даже если они кажутся подходящими.</p>
+                    
+                    <p>Это связано не с формальностями, а с безопасностью и медицинскими стандартами</p>
                 </div>
-                <div class="service-card">
-                    <h4>Восстановительная терапия</h4>
-                    <p>Постановка индивидуальных капельниц для быстрого восстановления организма.</p>
-                    <div class="price">от 4 500 ₽</div>
-                    <button class="btn btn-secondary">Подробнее</button>
+            </div>
+
+            <!-- Нижняя часть: 3 карточки с причинами -->
+            <div class="policy-cards">
+                
+                <!-- Карточка 1 -->
+                <div class="policy-card">
+                    <div class="policy-card-header">
+                        <svg class="icon-red" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="18" y1="6" x2="6" y2="18"></line>
+                            <line x1="6" y1="6" x2="18" y2="18"></line>
+                        </svg>
+                        <h4>Требования закона и медицинских стандартов</h4>
+                    </div>
+                    <p>Врач может использовать только препараты, которые находятся на официальном учёте клиники и проходят строгий контроль</p>
                 </div>
-                <div class="service-card">
-                    <h4>Снятие острой симптоматики</h4>
-                    <p>Экстренная помощь при болевых синдромах, отравлениях и высоких температурах.</p>
-                    <div class="price">от 6 000 ₽</div>
-                    <button class="btn btn-secondary">Подробнее</button>
+
+                <!-- Карточка 2 -->
+                <div class="policy-card">
+                    <div class="policy-card-header">
+                        <svg class="icon-red" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="18" y1="6" x2="6" y2="18"></line>
+                            <line x1="6" y1="6" x2="18" y2="18"></line>
+                        </svg>
+                        <h4>Гарантия качества и условий хранения</h4>
+                    </div>
+                    <p>Невозможно проверить, как хранился препарат, соблюдался ли температурный режим и не нарушена ли упаковка</p>
                 </div>
-                <div class="service-card">
-                    <h4>Программа "Антистресс"</h4>
-                    <p>Медикаментозная поддержка нервной системы, нормализация сна и давления.</p>
-                    <div class="price">от 3 800 ₽</div>
-                    <button class="btn btn-secondary">Подробнее</button>
+
+                <!-- Карточка 3 -->
+                <div class="policy-card">
+                    <div class="policy-card-header">
+                        <svg class="icon-green" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg>
+                        <h4>Ответственность врача за лечение</h4>
+                    </div>
+                    <p>Врач отвечает за результат процедуры и может работать только с теми препаратами, в качестве и происхождении которых уверен</p>
                 </div>
+
             </div>
         </div>
     </section>
@@ -86,30 +198,30 @@
     <section id="gallery" class="gallery">
         <div class="container">
             <h2 class="section-title">Галерея нашей клиники</h2>
-            <p class="section-subtitle">Посмотрите на комфортные условия, современное оборудование и доброжелательную атмосферу MedWay</p>
             
             <div class="gallery-grid">
                 <div class="gallery-item">
-                    <img src="https://via.placeholder.com/600x400/dddddd/666666?text=Интерьер+ресепшн" alt="Ресепшн клиники MedWay">
+                    <img src="photos/images.jpg" alt="Ресепшн клиники MedWay">
                 </div>
                 <div class="gallery-item">
-                    <img src="https://via.placeholder.com/600x400/dddddd/666666?text=Кабинет+врача" alt="Комфортный кабинет приема">
+                    <img src="photos/images.jpg" alt="Комфортный кабинет приема">
                 </div>
                 <div class="gallery-item">
-                    <img src="https://via.placeholder.com/600x400/dddddd/666666?text=Оборудование" alt="Современное диагностическое оборудование">
+                    <img src="photos/images.jpg" alt="Современное диагностическое оборудование">
                 </div>
                 <div class="gallery-item">
-                    <img src="https://via.placeholder.com/600x400/dddddd/666666?text=Палата" alt="Уютная палата дневного стационара">
+                    <img src="photos/images.jpg" alt="Уютная палата дневного стационара">
                 </div>
                 <div class="gallery-item">
-                    <img src="https://via.placeholder.com/600x400/dddddd/666666?text=Врач+и+пациент" alt="Консультация специалиста">
+                    <img src="photos/images.jpg" alt="Консультация специалиста">
                 </div>
                 <div class="gallery-item">
-                    <img src="https://via.placeholder.com/600x400/dddddd/666666?text=Процедурный" alt="Процедурный кабинет">
+                    <img src="photos/images.jpg" alt="Процедурный кабинет">
                 </div>
             </div>
         </div>
     </section>
+
     <section id="advantages" class="advantages">
         <div class="container">
             <h2 class="section-title">Почему выбирают MedWay?</h2>
@@ -133,7 +245,384 @@
         </div>
     </section>
 
-    <footer id="contacts" class="footer">
+    <section id="services" class="services-slider-section">
+        <div class="container">
+            <div class="slider-header">
+                <div class="slider-title-wrapper">
+                    <h2>Услуги наркологии</h2>
+                    <p>Полный спектр помощи при алкогольной и наркотической зависимости — от первичной консультации до реабилитации и стационара</p>
+                </div>
+                <div class="slider-arrows">
+                    <button class="arrow-btn arrow-left">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
+                    </button>
+                    <button class="arrow-btn arrow-right">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+                    </button>
+                </div>
+            </div>
+
+            <div class="slider-container">
+                <div class="slider-track">
+                
+                    <div class="pricing-card">
+                        <div class="card-price">от 4 900 ₽</div>
+                        <h3 class="card-title">Вывод из запоя</h3>
+                        <ul class="card-features">
+                            <li>Быстро и безопасно прерывает алкогольный запой</li>
+                            <li>Снимает интоксикацию и абстинентный синдром</li>
+                            <li>Восстанавливает работу печени и сердца</li>
+                            <li>Облегчает состояние уже после первой процедуры</li>
+                        </ul>
+                    </div>
+
+                    <div class="pricing-card">
+                        <div class="card-price">от 5 000 ₽</div>
+                        <h3 class="card-title">Лечение алкоголизма</h3>
+                        <ul class="card-features">
+                            <li>Комплексный подход к зависимости</li>
+                            <li>Подбор индивидуальной терапии и поддержка психолога</li>
+                            <li>Снижение риска рецидивов</li>
+                            <li>Контроль здоровья на всех этапах лечения</li>
+                            <li>На дому, в стационаре или в реабилитационном центре</li>
+                        </ul>
+                    </div>
+
+                    <div class="pricing-card">
+                        <div class="card-price">от 5 000 ₽</div>
+                        <h3 class="card-title">Лечение наркозависимости</h3>
+                        <ul class="card-features">
+                            <li>Помощь при наркотической ломке и абстинентном синдроме</li>
+                            <li>Поддержка психиатра и нарколога</li>
+                            <li>Восстановление физического и психологического состояния</li>
+                            <li>Работа с мотивацией и социальной адаптацией</li>
+                        </ul>
+                    </div>
+
+                    <div class="pricing-card">
+                        <div class="card-price">от 5 000 ₽</div>
+                        <h3 class="card-title">Консультации</h3>
+                        <ul class="card-features">
+                            <li>Прием нарколога, психиатра и психотерапевта</li>
+                            <li>Диагностика и подбор лечения</li>
+                            <li>Ответы на все вопросы о здоровье и зависимости</li>
+                            <li>Индивидуальный подход и рекомендации</li>
+                        </ul>
+                    </div>
+
+                    <div class="pricing-card">
+                        <div class="card-price">1 900 ₽</div>
+                        <h3 class="card-title">Выезд врача на дом</h3>
+                        <ul class="card-features">
+                            <li>Диагностика и первая помощь на месте</li>
+                            <li>Постановка капельницы, снятие симптомов ломки</li>
+                            <li>Минимизация риска для пациента</li>
+                            <li>Конфиденциальность и комфорт</li>
+                        </ul>
+                    </div>
+
+                    <div class="pricing-card">
+                        <div class="card-price">3 500 ₽</div>
+                        <h3 class="card-title">Амбулаторное лечение</h3>
+                        <ul class="card-features">
+                            <li>Посещение клиники без госпитализации</li>
+                            <li>Индивидуальные консультации и процедуры</li>
+                            <li>Контроль состояния и динамики лечения</li>
+                            <li>Удобное расписание без очередей</li>
+                        </ul>
+                    </div>
+
+                    <div class="pricing-card">
+                        <div class="card-price">от 3 500 ₽</div>
+                        <h3 class="card-title">Стационар 24/7</h3>
+                        <ul class="card-features">
+                            <li>Круглосуточное наблюдение специалистов</li>
+                            <li>Полное медицинское сопровождение</li>
+                            <li>Уютные условия и комфортное пребывание</li>
+                            <li>Контроль приема лекарств и питания</li>
+                        </ul>
+                    </div>
+
+                    <div class="pricing-card">
+                        <div class="card-price">от 3 100 ₽</div>
+                        <h3 class="card-title">Кодирование \ все методы</h3>
+                        <ul class="card-features">
+                            <li>Подбор эффективного метода индивидуально</li>
+                            <li>Психологическая и медикаментозная поддержка</li>
+                            <li>Снижение риска срывов и рецидивов</li>
+                            <li>Поддержка мотивации на долгосрочную трезвость</li>
+                        </ul>
+                    </div>
+
+                    <div class="pricing-card">
+                        <div class="card-price">от 4 600 ₽</div>
+                        <h3 class="card-title">Реабилитационный центр</h3>
+                        <ul class="card-features">
+                            <li>Программы восстановления после зависимостей</li>
+                            <li>Психологическая и социальная поддержка</li>
+                            <li>Обучение навыкам трезвой жизни</li>
+                            <li>Поддержка на всех этапах возвращения к нормальной жизни</li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="services-slider-section" style="background-color: #FAFAFD;">
+        <div class="container">
+            <div class="slider-header">
+                <div class="slider-title-wrapper">
+                    <h2>Цены на капельницы</h2>
+                    <p>Каждая капельница подбирается индивидуально — платите только за то, что действительно нужно вашему организму. Мы заранее согласуем стоимость и состав капельницы.</p>
+                </div>
+                <div class="slider-arrows">
+                    <button class="arrow-btn arrow-left">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
+                    </button>
+                    <button class="arrow-btn arrow-right">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+                    </button>
+                </div>
+            </div>
+
+            <div class="slider-container">
+                <div class="slider-track">
+                    <div class="pricing-card">
+                        <div class="card-price">1 900 ₽</div>
+                        <h3 class="card-title">Выезд врача на дом</h3>
+                        <ul class="card-features">
+                            <li>Диагностика и первая помощь на месте</li>
+                            <li>Постановка капельницы с подбором состава</li>
+                            <li>Снятие симптомов запоя или ломки</li>
+                            <li>Конфиденциальность и безопасно</li>
+                        </ul>
+                    </div>
+
+                    <div class="pricing-card">
+                        <div class="card-price">от 2 000 ₽</div>
+                        <h3 class="card-title">От алкоголя (запой, похмелье)</h3>
+                        <ul class="card-features">
+                            <li>Быстро снимает интоксикацию</li>
+                            <li>Убирает тошноту, дрожь и головную боль</li>
+                            <li>Восстанавливает водно-солевой баланс</li>
+                            <li>Поддерживает печень, сердце и мозг</li>
+                        </ul>
+                    </div>
+
+                    <div class="pricing-card">
+                        <div class="card-price">от 2 000 ₽</div>
+                        <h3 class="card-title">От наркотиков (при ломке)</h3>
+                        <ul class="card-features">
+                            <li>Снимает абстинентный синдром</li>
+                            <li>Восстанавливает силы и работу организма</li>
+                            <li>Снижает тревожность и раздражительность</li>
+                            <li>Контролируемая, безопасная терапия на дому</li>
+                        </ul>
+                    </div>
+
+                    <div class="pricing-card">
+                        <div class="card-price">8 000 ₽</div>
+                        <h3 class="card-title">Усиленная (двойная)</h3>
+                        <ul class="card-features">
+                            <li>Увеличенная доза препаратов для интенсивного воздействия</li>
+                            <li>Быстро выводит токсины и снимает симптомы</li>
+                            <li>Подходит для тяжёлых случаев интоксикации</li>
+                            <li>Контроль состояния врача на протяжении процедуры</li>
+                        </ul>
+                    </div>
+
+                    <div class="pricing-card">
+                        <div class="card-price">20 000 ₽</div>
+                        <h3 class="card-title">VIP (премиум)</h3>
+                        <ul class="card-features">
+                            <li>Индивидуально подобранный комплекс препаратов</li>
+                            <li>Комфорт и внимание на высшем уровне</li>
+                            <li>Подходит для сложных случаев и хронических пациентов</li>
+                            <li>Полное сопровождение врача во время процедуры</li>
+                        </ul>
+                    </div>
+
+                    <div class="pricing-card">
+                        <div class="card-price">от 1 500 ₽</div>
+                        <h3 class="card-title">Антистресс (седативная)</h3>
+                        <ul class="card-features">
+                            <li>Снимает тревогу, напряжение и стресс</li>
+                            <li>Укрепляет нервную систему</li>
+                            <li>Облегчает сон и стабилизирует эмоциональное состояние</li>
+                            <li>Подходит для восстановления после интоксикации</li>
+                        </ul>
+                    </div>
+
+                    <div class="pricing-card">
+                        <div class="card-price">от 1 200 ₽</div>
+                        <h3 class="card-title">Детоксикация</h3>
+                        <ul class="card-features">
+                            <li>Выводит токсины и продукты распада алкоголя/наркотиков</li>
+                            <li>Восстанавливает водно-солевой баланс и работу печени</li>
+                            <li>Облегчает головную боль и слабость</li>
+                            <li>Быстрое восстановление общего самочувствия</li>
+                        </ul>
+                    </div>
+
+                    <div class="pricing-card">
+                        <div class="card-price">от 4 900 ₽</div>
+                        <h3 class="card-title">Срочное восстановление</h3>
+                        <ul class="card-features">
+                            <li>Экстренное снятие интоксикации за короткое время</li>
+                            <li>Мгновенное улучшение самочувствия</li>
+                            <li>Подходит для тяжёлых случаев запоя и ломки</li>
+                            <li>Контроль врача на протяжении всей процедуры</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="about-clinic">
+        <div class="container">
+            
+            <div class="about-content">
+                <div class="about-text">
+                    <div class="logo">
+                        <span class="logo-blue">Med</span><span class="logo-green">Way</span>
+                    </div>
+                    <p class="subtitle">Скорая наркологическая помощь</p>
+                    <h2 class="main-heading">Круглосуточное анонимное лечение наркомании и алкоголизма</h2>
+                    <p class="description">
+                        Наша клиника борется с различными зависимостями, выделяя основные: алкоголизм и наркоманию на любой стадии прогрессирования заболевания
+                    </p>
+                </div>
+                
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?q=80&w=800&auto=format&fit=crop" alt="Врачи клиники на ресепшене">
+                </div>
+            </div>
+
+            <div class="about-stats">
+                
+                <div class="stat-item">
+                    <div class="stat-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#2C3135" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 22c-3-4-7-7-7-12a7 7 0 0 1 14 0c0 5-4 8-7 12z"></path>
+                            <path d="M12 22c-2-4-4-7-4-12a4 4 0 0 1 8 0c0 5-2 8-4 12z"></path>
+                        </svg>
+                    </div>
+                    <div class="stat-value">95% пациентов</div>
+                    <div class="stat-label">без рецидива</div>
+                </div>
+
+                <div class="stat-item">
+                    <div class="stat-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#2C3135" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="5" r="2"></circle>
+                            <path d="M5 11l4-2 3 3 4-2 3 2"></path>
+                            <path d="M9 22v-6h6v6"></path>
+                        </svg>
+                    </div>
+                    <div class="stat-value">10 лет</div>
+                    <div class="stat-label">помогаем людям</div>
+                </div>
+
+                <div class="stat-item">
+                    <div class="stat-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#2C3135" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="9" cy="7" r="4"></circle>
+                            <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                        </svg>
+                    </div>
+                    <div class="stat-value">10 000+</div>
+                    <div class="stat-label">вылеченных пациентов</div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="certificates" class="certificates-section">
+        <div class="container">
+            <h2 class="section-title text-center">Лицензии и сертификаты</h2>
+            <p class="section-subtitle">Осуществляем медицинскую деятельность на основании официальных лицензий Министерства здравоохранения РФ.</p>
+            
+            <div class="certificates-wrapper">
+                <div class="certificate-item">
+                    <img src="photos/cert1.jpg" alt="Медицинская лицензия" class="cert-img">
+                </div>
+                
+                <div class="certificate-item">
+                    <img src="photos/cert2.jpg" alt="Приложение к лицензии" class="cert-img">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="imageModal" class="image-modal">
+        <span class="modal-close">&times;</span>
+        <img class="modal-content" id="expandedImg" alt="Увеличенный сертификат">
+    </div>
+
+    <section id="contacts" class="contacts">
+        <div class="container">
+            <h2 class="section-title">Контакты</h2>
+            <div class="contacts-wrapper">
+                
+                <div class="contacts-info">
+                    <p class="contacts-desc">
+                        Если вам или вашим близким требуется срочная медицинская помощь, свяжитесь с нами. Наша дежурная бригада готова к выезду в любое время суток.
+                    </p>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                            </svg>
+                        </div>
+                        <div class="contact-text">
+                            <span>Телефон для связи:</span>
+                            <a href="tel:+74950000000" class="contact-link">+7 (495) 000-00-00</a>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                <circle cx="12" cy="10" r="3"></circle>
+                            </svg>
+                        </div>
+                        <div class="contact-text">
+                            <span>Наш адрес:</span>
+                            <strong>г. Москва, ул. Медицинская, д. 10, корпус 2</strong>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <polyline points="12 6 12 12 16 14"></polyline>
+                            </svg>
+                        </div>
+                        <div class="contact-text">
+                            <span>Режим работы:</span>
+                            <strong>Круглосуточно (24/7), без выходных</strong>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contacts-map">
+                    <iframe src="https://yandex.ru/map-widget/v1/?ll=37.622504%2C55.753215&z=12" width="100%" height="100%" frameborder="0" allowfullscreen="true" style="position:relative;"></iframe>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
         <div class="container footer-inner">
             <div class="footer-info">
                 <div class="logo-footer">
@@ -153,3 +642,112 @@
 
 </body>
 </html>
+
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const sliderSections = document.querySelectorAll('.services-slider-section');
+
+        sliderSections.forEach(section => {
+            const track = section.querySelector('.slider-track');
+            const btnLeft = section.querySelector('.arrow-left');
+            const btnRight = section.querySelector('.arrow-right');
+            const gap = 24; // Должен совпадать с gap в CSS
+
+            // Динамический расчет шага прокрутки (ширина одной карточки + отступ)
+            const getScrollStep = () => {
+                const card = track.querySelector('.pricing-card');
+                return card ? card.clientWidth + gap : 300;
+            };
+
+            // Клик по стрелкам
+            btnLeft.addEventListener('click', () => {
+                track.scrollBy({ left: -getScrollStep(), behavior: 'smooth' });
+            });
+
+            btnRight.addEventListener('click', () => {
+                track.scrollBy({ left: getScrollStep(), behavior: 'smooth' });
+            });
+
+            // Логика перетаскивания мышкой (Drag & Drop)
+            let isDown = false;
+            let startX;
+            let scrollLeft;
+
+            track.addEventListener('mousedown', (e) => {
+                isDown = true;
+                track.style.scrollSnapType = 'none'; // Отключаем привязку во время таскивания
+                track.style.scrollBehavior = 'auto';
+                startX = e.pageX - track.offsetLeft;
+                scrollLeft = track.scrollLeft;
+            });
+
+            const stopDragging = () => {
+                if (!isDown) return;
+                isDown = false;
+                track.style.scrollSnapType = 'x mandatory'; // Возвращаем магнит после отпускания мыши
+                track.style.scrollBehavior = 'smooth';
+            };
+
+            track.addEventListener('mouseleave', stopDragging);
+            track.addEventListener('mouseup', stopDragging);
+
+            track.addEventListener('mousemove', (e) => {
+                if (!isDown) return;
+                e.preventDefault();
+                const x = e.pageX - track.offsetLeft;
+                const walk = (x - startX) * 1.5; // Скорость перетаскивания
+                track.scrollLeft = scrollLeft - walk;
+            });
+        });
+    });
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+    const modal = document.getElementById("imageModal");
+    const expandedImg = document.getElementById("expandedImg");
+    const closeBtn = document.querySelector(".modal-close");
+    const certImages = document.querySelectorAll(".cert-img");
+
+    if (modal && expandedImg && certImages.length > 0) {
+        // Открытие картинки при клике
+        certImages.forEach(img => {
+            img.addEventListener("click", function() {
+                modal.style.display = "flex"; // Делаем блок видимым
+                // Небольшая задержка, чтобы сработала CSS-анимация opacity
+                setTimeout(() => {
+                    modal.classList.add("show");
+                }, 10);
+                expandedImg.src = this.src; // Передаем ссылку на нажатую картинку
+            });
+        });
+
+        // Функция закрытия
+        const closeModal = () => {
+            modal.classList.remove("show");
+            // Ждем завершения анимации затухания перед скрытием блока (300ms)
+            setTimeout(() => {
+                modal.style.display = "none";
+                expandedImg.src = ""; // Очищаем src, чтобы не мелькала старая картинка при новом открытии
+            }, 300);
+        };
+
+        // Закрытие по крестику
+        closeBtn.addEventListener("click", closeModal);
+
+        // Закрытие по клику на темный фон
+        modal.addEventListener("click", (e) => {
+            if (e.target === modal) {
+                closeModal();
+            }
+        });
+
+        // Закрытие по кнопке Esc на клавиатуре
+        document.addEventListener("keydown", (e) => {
+            if (e.key === "Escape" && modal.classList.contains("show")) {
+                closeModal();
+            }
+        });
+    }
+});
+</script>
